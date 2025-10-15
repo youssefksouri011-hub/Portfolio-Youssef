@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Youssef Ksouri — Data Analyst</title>
+  <style>
+    :root{--bg:#0b0f14;--card:#121825;--muted:#8aa0b4;--txt:#e6eef6;--acc:#66b3ff;}
+    *{box-sizing:border-box} body{margin:0;background:linear-gradient(180deg,#0b0f14,#0e141c);color:var(--txt);font:16px/1.6 Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial}
+    .wrap{max-width:980px;margin:auto;padding:40px 20px}
+    header{display:flex;gap:24px;align-items:center;justify-content:space-between}
+    .brand{display:flex;gap:16px;align-items:center}
+    .avatar{width:56px;height:56px;border-radius:50%;background:#1f2a3a;display:grid;place-items:center;font-weight:700}
+    nav a{color:var(--muted);margin-left:16px;text-decoration:none}
+    nav a:hover{color:var(--acc)}
+    .hero{margin:40px 0 28px;padding:28px;border:1px solid #1f2a3a;border-radius:16px;background:linear-gradient(180deg,#101726,#0f1521)}
+    h1{margin:0 0 12px;font-size:28px}
+    .muted{color:var(--muted)}
+    .grid{display:grid;gap:16px}
+    @media(min-width:860px){.grid{grid-template-columns:repeat(3,1fr)}}
+    .card{background:var(--card);border:1px solid #1f2a3a;border-radius:16px;padding:18px}
+    .card h3{margin:0 0 6px}
+    .tag{display:inline-block;font-size:12px;padding:2px 8px;border:1px solid #2a3a51;border-radius:999px;color:var(--muted);margin-right:6px}
+    .kpis{display:flex;gap:10px;flex-wrap:wrap;margin-top:8px}
+    .btn{display:inline-block;margin-top:10px;padding:10px 14px;border-radius:10px;background:#173556;border:1px solid #264b74;color:#bfe0ff;text-decoration:none}
+    .btn:hover{filter:brightness(1.1)}
+    footer{margin-top:28px;color:var(--muted);font-size:14px}
+    .two{display:grid;gap:16px}@media(min-width:860px){.two{grid-template-columns:1.2fr .8fr}}
+    ul{margin:8px 0 0 18px}
+    code{background:#0f1a26;border:1px solid #1f2a3a;padding:2px 6px;border-radius:6px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="avatar">YK</div>
+        <div>
+          <strong>Youssef Ksouri</strong><br>
+          <span class="muted">Data Analyst · BigQuery · Looker · SQL</span>
+        </div>
+      </div>
+      <nav>
+        <a href="#projets">Projets</a>
+        <a href="#stack">Stack</a>
+        <a href="#apropos">À propos</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <h1>Des décisions plus rapides grâce à des données fiables.</h1>
+      <p class="muted">Je conçois des modèles de données BigQuery, j’optimise les coûts de requête, et je livre des tableaux de bord Looker qui synthétisent l’essentiel pour les métiers.</p>
+      <a class="btn" href="#projets">Voir les études de cas</a>
+    </section>
+
+    <section id="projets">
+      <h2>Projets phares</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>MVP Reporting Banque</h3>
+          <div class="kpis"><span class="tag">BigQuery</span><span class="tag">Looker</span><span class="tag">dbt</span></div>
+          <p class="muted">Modèle transactions → 10 KPIs, 1 page dashboard, dictionnaire de données.</p>
+          <a class="btn" href="https://github.com/USER/mvp-banking" target="_blank">Repo</a>
+          <a class="btn" href="#" target="_blank">Demo</a>
+        </article>
+        <article class="card">
+          <h3>Suivi des coûts BigQuery</h3>
+          <div class="kpis"><span class="tag">BQ Jobs</span><span class="tag">Cost</span></div>
+          <p class="muted">TB scannés par jour, par dataset/utilisateur, et bonnes pratiques d’optimisation.</p>
+          <a class="btn" href="https://github.com/USER/bq-cost-monitor" target="_blank">Repo</a>
+        </article>
+        <article class="card">
+          <h3>Pricing & Savings</h3>
+          <div class="kpis"><span class="tag">SQL fenêtres</span><span class="tag">Supply</span></div>
+          <p class="muted">Ranking fournisseur, dédup, scénarios d’économies et comparatifs avant/après.</p>
+          <a class="btn" href="https://github.com/USER/pricing-savings" target="_blank">Repo</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="stack" class="two" style="margin-top:22px">
+      <div class="card">
+        <h3>Stack & Bonnes pratiques</h3>
+        <ul>
+          <li><b>BigQuery</b> (partitions & clustering, LIMIT/preview, vues dédiées Looker)</li>
+          <li><b>dbt</b> (tests, docs, versionning, macros coût)</li>
+          <li><b>Looker Studio</b> (KPIs, filtres, liens sources)</li>
+          <li><b>CI</b> GitHub Actions (lint SQL, dry run, déploiement vues)</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Exemples</h3>
+        <p class="muted">KPIs livrés : GMV, Conversion, Délai de règlement, NPL, Savings potentiels…</p>
+        <p>Voir le code : <code>sql/</code>, les données : <code>data/</code>, et les captures : <code>assets/</code>.</p>
+      </div>
+    </section>
+
+    <section id="apropos" style="margin-top:22px">
+      <div class="card">
+        <h3>À propos</h3>
+        <p class="muted">Data Analyst spécialisé GCP. J’aide les équipes à fiabiliser leurs données et à livrer des dashboards orientés décision. Exemples : banque/assurance, supply, pricing.</p>
+      </div>
+    </section>
+
+    <section id="contact" style="margin-top:22px">
+      <div class="card">
+        <h3>Contact</h3>
+        <p>✉️ <a class="btn" href="mailto:youssefksouri011@gmail.com">Me contacter</a>
+           <a class="btn" href="https://www.linkedin.com/in/youssef-ksouri/" target="_blank">LinkedIn</a>
+           <a class="btn" href="https://github.com/USER" target="_blank">GitHub</a></p>
+      </div>
+    </section>
+
+    <footer>© 2025 · Youssef Ksouri · Portfolio Data</footer>
+  </div>
+</body>
+</html>
